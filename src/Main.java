@@ -5,9 +5,12 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        double price = 100;
-       // price *= 0.67;
-        price = price - price * 0.33;
-        System.out.println(price);
+        String text = scanner.nextLine();
+
+        for (int i = 0; i < text.length(); i++){
+            System.out.println(text.charAt(i));
+        }
+
+
     }
 }
