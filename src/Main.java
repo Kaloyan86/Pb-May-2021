@@ -1,20 +1,34 @@
-
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int poorGradesLimit = Integer.parseInt(scanner.nextLine());
-        String problemName = scanner.nextLine();
 
-        while (!problemName.equals("Enough")) {
-            int problemNameNumber = Integer.parseInt(problemName);
-            int grade = Integer.parseInt(scanner.nextLine());
+        // Имаме n-състезатели
+        int n = Integer.parseInt(scanner.nextLine());
+        // Всеки състезател започва да стреля до получаване на команда "end"
+        // всеки изтрел репрезентира броя точки които е уцелил
 
-
-            problemName = scanner.nextLine();
+        // 2
+        // Kaloyan
+        // 10
+        // 15
+        // 5
+        // end
+        // Peter
+        // 5
+        // 6
+        // end
+        for (int i = 0; i < n; i++) {
+            int currentPlayerPoints = 0;
+            String currentPlayerName = scanner.nextLine();
+            String input = scanner.nextLine();
+            while (!input.equals("end")) {
+                int points = Integer.parseInt(input);
+                currentPlayerPoints += points;
+                input = scanner.nextLine();
+            }
+            System.out.printf("Player: %s has %d points%n",currentPlayerName,currentPlayerPoints);
         }
-
     }
-
 }
