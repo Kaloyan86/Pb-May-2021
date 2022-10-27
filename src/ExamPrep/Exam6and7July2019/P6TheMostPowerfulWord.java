@@ -1,6 +1,6 @@
 package ExamPrep.Exam6and7July2019;
 
-import java.util.Locale;
+
 import java.util.Scanner;
 
 public class P6TheMostPowerfulWord {
